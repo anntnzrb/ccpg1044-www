@@ -118,6 +118,174 @@
           </select>
         </div>
       </section>
+
+      <!-- Sección de Nombre -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Nombre</h2>
+        <div class="mb-4">
+          <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            v-model="nombre"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Ubicación -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Ubicación</h2>
+        <div class="mb-4">
+          <label for="ubicacion" class="block text-sm font-medium text-gray-700">Ubicación:</label>
+          <input
+            type="text"
+            id="ubicacion"
+            v-model="ubicacion"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Nivel de Educación -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Nivel de Educación</h2>
+        <div class="mb-4">
+          <label for="nivel_de_educacion" class="block text-sm font-medium text-gray-700">Nivel de Educación:</label>
+          <input
+            type="text"
+            id="nivel_de_educacion"
+            v-model="nivel_de_educacion"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Certificaciones -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Certificaciones</h2>
+        <div class="mb-4">
+          <label for="certificaciones" class="block text-sm font-medium text-gray-700">Certificaciones:</label>
+          <input
+            type="text"
+            id="certificaciones"
+            v-model="certificaciones"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Conocimientos -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Conocimientos</h2>
+        <div class="mb-4">
+          <label for="conocimientos" class="block text-sm font-medium text-gray-700">Conocimientos:</label>
+          <input
+            type="text"
+            id="conocimientos"
+            v-model="conocimientos"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Disponibilidad Horaria -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Disponibilidad Horaria</h2>
+        <div class="mb-4">
+          <label for="disponibilidad_horaria" class="block text-sm font-medium text-gray-700">Disponibilidad Horaria:</label>
+          <input
+            type="text"
+            id="disponibilidad_horaria"
+            v-model="disponibilidad_horaria"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Habilidades -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Habilidades</h2>
+        <div class="mb-4">
+          <label for="habilidades" class="block text-sm font-medium text-gray-700">Habilidades:</label>
+          <input
+            type="text"
+            id="habilidades"
+            v-model="habilidades"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Experiencia Laboral -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Experiencia Laboral</h2>
+        <div class="mb-4">
+          <label for="experiencia_laboral" class="block text-sm font-medium text-gray-700">Experiencia Laboral:</label>
+          <input
+            type="text"
+            id="experiencia_laboral"
+            v-model="experiencia_laboral"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Tipo de Postulante -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Tipo de Postulante</h2>
+        <div class="mb-4">
+          <label for="tipo_de_postulante" class="block text-sm font-medium text-gray-700">Tipo de Postulante:</label>
+          <input
+            type="text"
+            id="tipo_de_postulante"
+            v-model="tipo_de_postulante"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Discapacidad -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Discapacidad</h2>
+        <div class="mb-4">
+          <label for="discapacidad" class="block text-sm font-medium text-gray-700">Discapacidad:</label>
+          <input
+            type="text"
+            id="discapacidad"
+            v-model="discapacidad"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Modo de Trabajo -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Modo de Trabajo</h2>
+        <div class="mb-4">
+          <label for="modo_de_trabajo" class="block text-sm font-medium text-gray-700">Modo de Trabajo:</label>
+          <input
+            type="text"
+            id="modo_de_trabajo"
+            v-model="modo_de_trabajo"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de Preferencia de Contrato -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Preferencia de Contrato</h2>
+        <div class="mb-4">
+          <label for="preferencia_de_contrato" class="block text-sm font-medium text-gray-700">Preferencia de Contrato:</label>
+          <input
+            type="text"
+            id="preferencia_de_contrato"
+            v-model="preferencia_de_contrato"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+      </section>
     </form>
   </div>
 </template>
@@ -126,6 +294,18 @@
 export default {
   data() {
     return {
+      nombre: '',
+      ubicacion: '',
+      nivel_de_educacion: '',
+      certificaciones: '',
+      conocimientos: '',
+      disponibilidad_horaria: '',
+      habilidades: '',
+      experiencia_laboral: '',
+      tipo_de_postulante: '',
+      discapacidad: '',
+      modo_de_trabajo: '',
+      preferencia_de_contrato: '',
       educacion: {
         nivelEstudios: ''
       },
