@@ -203,33 +203,7 @@
         </div>
       </section>
 
-      <!-- Sección de Habilidades -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Habilidades</h2>
-        <div class="mb-4">
-          <label for="habilidades" class="block text-sm font-medium text-gray-700">Habilidades:</label>
-          <input
-            type="text"
-            id="habilidades"
-            v-model="habilidades"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
 
-      <!-- Sección de Experiencia Laboral -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Experiencia Laboral</h2>
-        <div class="mb-4">
-          <label for="experiencia_laboral" class="block text-sm font-medium text-gray-700">Experiencia Laboral:</label>
-          <input
-            type="text"
-            id="experiencia_laboral"
-            v-model="experiencia_laboral"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
 
       <!-- Sección de Tipo de Postulante -->
       <section class="bg-white p-6 rounded-lg shadow-md">
