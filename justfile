@@ -17,3 +17,8 @@ lint:
 # run project
 run: bootstrap fmt
     npm run dev
+
+# update js dependencies
+update-js:
+	npm update
+
