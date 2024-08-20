@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "github.copilot",
+    "github.copilot-chat",
+    "pinage404.nix-extension-pack",
+    "mkhl.direnv"
+  ]
+}
