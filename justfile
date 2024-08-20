@@ -22,3 +22,5 @@ run: bootstrap fmt
 update-js:
 	npm update
 
+clean:
+	git clean -fdx
