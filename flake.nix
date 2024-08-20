@@ -59,6 +59,8 @@
               };
           };
 
+          dotenv.enable = true;
+
           packages = with pkgs; [
             just
             config.treefmt.build.wrapper
