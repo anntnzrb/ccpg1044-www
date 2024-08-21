@@ -163,9 +163,23 @@
       <!-- send btn -->
       <button @click="sendData" type="button" :disabled="!isFormValid"
         class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-700">
-        Send
+        Enviar
       </button>
 
+      <!-- ofertas recomendadas -->
+      <div v-if="ofertas.length" class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-black">Job Offers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div v-for="offer in ofertas" :key="offer.id" class="bg-white p-6 rounded-lg shadow-md">
+            <!-- UPDATE ME -->
+            <h3 class="text-xl font-bold mb-2">{{ offer.title }}</h3>
+            <p class="text-gray-700 mb-4">{{ offer.description }}</p>
+            <p class="text-gray-700"><strong>Location:</strong> {{ offer.location }}</p>
+            <p class="text-gray-700"><strong>Salary:</strong> {{ offer.salary }}</p>
+            <p class="text-gray-700"><strong>Type:</strong> {{ offer.type }}</p>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </template>
@@ -201,7 +215,8 @@ export default {
         blandas: ''
       },
       sueldo: '',
-      preferencia: ''
+      preferencia: '',
+      ofertas: [] // store job offers
     }
   },
   computed: {
@@ -325,10 +340,19 @@ export default {
         disability: this.discapacidad ? 'si' : 'no'
       }
 
+      const mockData = true;
+      if (mockData) {
+        this.ofertas = [
+          { id: 1, title: 'Software Engineer', description: 'Develop software...', location: 'New York', salary: '$100k', type: 'Full-time' },
+          { id: 2, title: 'Data Scientist', description: 'Analyze data...', location: 'San Francisco', salary: '$120k', type: 'Full-time' },
+        ];
+      }
+
       axios
         .post('https://api.example.com/submit', data)
         .then((response) => {
           console.log('Data sent successfully:', response.data)
+          this.ofertas = response.data.jobOffers; // received job offers
         })
         .catch((error) => {
           console.error('Error sending data:', error)
