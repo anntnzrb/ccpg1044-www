@@ -6,56 +6,30 @@
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Educación</h2>
         <div class="mb-4">
-          <label for="nivel-estudios" class="block text-sm font-medium text-gray-700"
-            >Nivel de estudios:</label
-          >
-          <input
-            type="text"
-            id="nivel-estudios"
-            v-model="educacion.nivelEstudios"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <label for="nivel-estudios" class="block text-sm font-medium text-gray-700">Nivel de estudios:</label>
+          <input type="text" id="nivel-estudios" v-model="educacion.nivelEstudios"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
+        <button @click="cargarDatosEducacion" type="button"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+          Cargar
+        </button>
       </section>
 
       <!-- Sección de Experiencia Laboral -->
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Experiencia Laboral</h2>
         <div class="mb-4">
-          <label for="titulo-puesto" class="block text-sm font-medium text-gray-700"
-            >Título del Puesto:</label
-          >
-          <input
-            type="text"
-            id="titulo-puesto"
-            v-model="experiencia.tituloPuesto"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <label for="titulo-puesto" class="block text-sm font-medium text-gray-700">Título del Puesto:</label>
+          <input type="text" id="titulo-puesto" v-model="experiencia.tituloPuesto"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
-        <div class="mb-4">
-          <label for="duracion" class="block text-sm font-medium text-gray-700"
-            >Duración en el empleo (Mes/Año de inicio y fin):</label
-          >
-          <input
-            type="text"
-            id="duracion"
-            v-model="experiencia.duracion"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-        <div class="mb-4">
-          <label for="responsabilidades" class="block text-sm font-medium text-gray-700"
-            >Responsabilidades principales:</label
-          >
-          <textarea
-            id="responsabilidades"
-            v-model="experiencia.responsabilidades"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          ></textarea>
-        </div>
+        <button @click="cargarDatosExperiencia" type="button"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+          Cargar
+        </button>
       </section>
 
-      <!-- Sección de Habilidades -->
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Habilidades</h2>
 
@@ -64,11 +38,12 @@
           <label for="habilidades-tecnicas" class="block text-sm font-medium text-gray-700">
             Lista de Habilidades Técnicas:
           </label>
-          <textarea
-            id="habilidades-tecnicas"
-            v-model="habilidades.tecnicas"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          ></textarea>
+          <textarea id="habilidades-tecnicas" v-model="habilidades.tecnicas"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+          <button @click="cargarDatosHabilidadesTecnicas" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
 
         <!-- Habilidades Blandas -->
@@ -76,27 +51,12 @@
           <label for="habilidades-blandas" class="block text-sm font-medium text-gray-700">
             Lista de Habilidades Blandas:
           </label>
-          <textarea
-            id="habilidades-blandas"
-            v-model="habilidades.blandas"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          ></textarea>
-        </div>
-      </section>
-
-      <!-- Sección de Sueldo Esperado -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Sueldo Esperado</h2>
-        <div class="mb-4">
-          <label for="sueldo" class="block text-sm font-medium text-gray-700"
-            >Rango Salarial <b>(USD)</b>:</label
-          >
-          <input
-            type="text"
-            id="sueldo"
-            v-model="sueldo"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <textarea id="habilidades-blandas" v-model="habilidades.blandas"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+          <button @click="cargarDatosHabilidadesBlandas" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
 
@@ -104,14 +64,9 @@
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Preferencia de Trabajo</h2>
         <div class="mb-4">
-          <label for="preferencia" class="block text-sm font-medium text-gray-700"
-            >Preferencia de trabajo:</label
-          >
-          <select
-            id="preferencia"
-            v-model="preferencia"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          >
+          <label for="preferencia" class="block text-sm font-medium text-gray-700">Preferencia de trabajo:</label>
+          <select id="preferencia" v-model="preferencia"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
             <option value="remoto">Remoto</option>
             <option value="hibrido">Híbrido</option>
             <option value="presencial">Presencial</option>
@@ -124,12 +79,12 @@
         <h2 class="text-2xl font-semibold mb-4 text-black">Nombre</h2>
         <div class="mb-4">
           <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            v-model="nombre"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <input type="text" id="nombre" v-model="nombre"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <button @click="cargarDatosNombre" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
 
@@ -138,26 +93,12 @@
         <h2 class="text-2xl font-semibold mb-4 text-black">Ubicación</h2>
         <div class="mb-4">
           <label for="ubicacion" class="block text-sm font-medium text-gray-700">Ubicación:</label>
-          <input
-            type="text"
-            id="ubicacion"
-            v-model="ubicacion"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
-
-      <!-- Sección de Nivel de Educación -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Nivel de Educación</h2>
-        <div class="mb-4">
-          <label for="nivel_de_educacion" class="block text-sm font-medium text-gray-700">Nivel de Educación:</label>
-          <input
-            type="text"
-            id="nivel_de_educacion"
-            v-model="nivel_de_educacion"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <input type="text" id="ubicacion" v-model="ubicacion"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <button @click="cargarDatosUbicacion" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
 
@@ -166,12 +107,12 @@
         <h2 class="text-2xl font-semibold mb-4 text-black">Certificaciones</h2>
         <div class="mb-4">
           <label for="certificaciones" class="block text-sm font-medium text-gray-700">Certificaciones:</label>
-          <input
-            type="text"
-            id="certificaciones"
-            v-model="certificaciones"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <input type="text" id="certificaciones" v-model="certificaciones"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <button @click="cargarDatosCertificaciones" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
 
@@ -180,42 +121,33 @@
         <h2 class="text-2xl font-semibold mb-4 text-black">Conocimientos</h2>
         <div class="mb-4">
           <label for="conocimientos" class="block text-sm font-medium text-gray-700">Conocimientos:</label>
-          <input
-            type="text"
-            id="conocimientos"
-            v-model="conocimientos"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <input type="text" id="conocimientos" v-model="conocimientos"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <button @click="cargarDatosConocimientos" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
-
-      <!-- Sección de Disponibilidad Horaria -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Disponibilidad Horaria</h2>
-        <div class="mb-4">
-          <label for="disponibilidad_horaria" class="block text-sm font-medium text-gray-700">Disponibilidad Horaria:</label>
-          <input
-            type="text"
-            id="disponibilidad_horaria"
-            v-model="disponibilidad_horaria"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
-
-
 
       <!-- Sección de Tipo de Postulante -->
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Tipo de Postulante</h2>
         <div class="mb-4">
-          <label for="tipo_de_postulante" class="block text-sm font-medium text-gray-700">Tipo de Postulante:</label>
-          <input
-            type="text"
-            id="tipo_de_postulante"
-            v-model="tipo_de_postulante"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <label for="tipo_de_postulante" class="block text-sm font-medium text-gray-700">Tipo de Contrato:</label>
+          <select id="tipo_de_postulante" v-model="tipo_de_postulante"
+            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            <option value="pasantia">Pasantía</option>
+            <option value="tiempo completo">Tiempo Completo</option>
+            <option value="medio tiempo">Medio Tiempo</option>
+            <option value="por horas">Por Horas</option>
+            <option value="contrato por tiempo determinado">Contrato por Tiempo Determinado</option>
+            <option value="nocturno">Nocturno</option>
+          </select>
+          <button @click="cargarDatosTipoDePostulante" type="button"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
+            Cargar
+          </button>
         </div>
       </section>
 
@@ -223,41 +155,8 @@
       <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4 text-black">Discapacidad</h2>
         <div class="mb-4">
-          <label for="discapacidad" class="block text-sm font-medium text-gray-700">Discapacidad:</label>
-          <input
-            type="text"
-            id="discapacidad"
-            v-model="discapacidad"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
-
-      <!-- Sección de Modo de Trabajo -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Modo de Trabajo</h2>
-        <div class="mb-4">
-          <label for="modo_de_trabajo" class="block text-sm font-medium text-gray-700">Modo de Trabajo:</label>
-          <input
-            type="text"
-            id="modo_de_trabajo"
-            v-model="modo_de_trabajo"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
-      </section>
-
-      <!-- Sección de Preferencia de Contrato -->
-      <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4 text-black">Preferencia de Contrato</h2>
-        <div class="mb-4">
-          <label for="preferencia_de_contrato" class="block text-sm font-medium text-gray-700">Preferencia de Contrato:</label>
-          <input
-            type="text"
-            id="preferencia_de_contrato"
-            v-model="preferencia_de_contrato"
-            class="mt-1 block w-full border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
+          <input type="checkbox" id="discapacidad" v-model="discapacidad"
+            class="mt-1 block border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
       </section>
     </form>
@@ -294,6 +193,97 @@ export default {
       },
       sueldo: '',
       preferencia: ''
+    }
+  },
+  methods: {
+    obtenerOpcionAleatoria(opciones, valorActual) {
+      let nuevaOpcion
+      do {
+        nuevaOpcion = opciones[Math.floor(Math.random() * opciones.length)]
+      } while (nuevaOpcion === valorActual && opciones.length > 1)
+      return nuevaOpcion
+    },
+    cargarDatosEducacion() {
+      this.educacion.nivelEstudios = this.obtenerOpcionAleatoria(
+        [
+          'Licenciatura en Ciencias de la Computación',
+          'Ingeniería en Sistemas',
+          'Maestría en Inteligencia Artificial',
+          'Doctorado en Matemáticas Aplicadas'
+        ],
+        this.educacion.nivelEstudios
+      )
+    },
+    cargarDatosExperiencia() {
+      this.experiencia.tituloPuesto = this.obtenerOpcionAleatoria(
+        [
+          'Desarrollador de Software',
+          'Ingeniero de Datos',
+          'Administrador de Sistemas',
+          'Analista de Seguridad'
+        ],
+        this.experiencia.tituloPuesto
+      )
+    },
+    cargarDatosHabilidadesTecnicas() {
+      this.habilidades.tecnicas = this.obtenerOpcionAleatoria(
+        [
+          'Programación en Python, Java, C++',
+          'Desarrollo Web con HTML, CSS, JavaScript',
+          'Bases de Datos SQL y NoSQL',
+          'Machine Learning y Data Science'
+        ],
+        this.habilidades.tecnicas
+      )
+    },
+    cargarDatosHabilidadesBlandas() {
+      this.habilidades.blandas = this.obtenerOpcionAleatoria(
+        ['Comunicación Efectiva', 'Trabajo en Equipo', 'Liderazgo', 'Resolución de Problemas'],
+        this.habilidades.blandas
+      )
+    },
+    cargarDatosNombre() {
+      this.nombre = this.obtenerOpcionAleatoria(
+        ['Juan Pérez', 'María García', 'Carlos López', 'Ana Martínez'],
+        this.nombre
+      )
+    },
+    cargarDatosUbicacion() {
+      this.ubicacion = this.obtenerOpcionAleatoria(
+        ['Quito', 'Guayaquil', 'Cuenca', 'Santa Elena', 'Machala'],
+        this.ubicacion
+      )
+    },
+    cargarDatosCertificaciones() {
+      this.certificaciones = this.obtenerOpcionAleatoria(
+        [
+          'Certified Scrum Master',
+          'AWS Certified Solutions Architect',
+          'Cisco Certified Network Associate',
+          'Microsoft Certified: Azure Fundamentals',
+          'Google Cloud Professional Data Engineer'
+        ],
+        this.certificaciones
+      )
+    },
+    cargarDatosConocimientos() {
+      this.conocimientos = this.obtenerOpcionAleatoria(
+        ['JavaScript', 'Python', 'Docker', 'Kubernetes', 'CI/CD'],
+        this.conocimientos
+      )
+    },
+    cargarDatosTipoDePostulante() {
+      this.tipo_de_postulante = this.obtenerOpcionAleatoria(
+        [
+          'pasantia',
+          'tiempo completo',
+          'medio tiempo',
+          'por horas',
+          'contrato por tiempo determinado',
+          'nocturno'
+        ],
+        this.tipo_de_postulante
+      )
     }
   }
 }
