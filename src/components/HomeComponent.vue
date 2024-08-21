@@ -159,11 +159,20 @@
             class="mt-1 block border-gray-500 bg-gray-100 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
       </section>
+
+      <!-- send btn -->
+      <button @click="sendData" type="button" :disabled="!isFormValid"
+        class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-700">
+        Send
+      </button>
+
     </form>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -193,6 +202,22 @@ export default {
       },
       sueldo: '',
       preferencia: ''
+    }
+  },
+  computed: {
+    isFormValid() {
+      return (
+        this.nombre &&
+        this.ubicacion &&
+        this.educacion.nivelEstudios &&
+        this.certificaciones &&
+        this.conocimientos &&
+        this.habilidades.tecnicas &&
+        this.habilidades.blandas &&
+        this.experiencia.tituloPuesto &&
+        this.tipo_de_postulante &&
+        this.preferencia !== ''
+      );
     }
   },
   methods: {
@@ -284,6 +309,30 @@ export default {
         ],
         this.tipo_de_postulante
       )
+    },
+    sendData() {
+      const data = {
+        name: this.nombre,
+        education_level: this.educacion.nivelEstudios,
+        job_title: this.experiencia.tituloPuesto,
+        skills: `${this.habilidades.tecnicas}, ${this.habilidades.blandas}`,
+        work_mode: this.preferencia,
+        location: this.ubicacion,
+        certifications: this.certificaciones,
+        knowledge: this.conocimientos,
+        work_experience: this.experiencia.tituloPuesto,
+        contract_type: this.tipo_de_postulante,
+        disability: this.discapacidad ? 'si' : 'no'
+      }
+
+      axios
+        .post('https://api.example.com/submit', data)
+        .then((response) => {
+          console.log('Data sent successfully:', response.data)
+        })
+        .catch((error) => {
+          console.error('Error sending data:', error)
+        })
     }
   }
 }
