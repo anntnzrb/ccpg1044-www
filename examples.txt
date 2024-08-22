@@ -1,0 +1,67 @@
+# Ejemplo 1
+Nombre:
+Laura Pérez
+Cargo Aspirado: 
+Desarrolladora Frontend
+Ciudad: 
+Quito
+Discapacidad: 
+No
+Nivel de Educación: 
+Ingeniería en Sistemas
+Habilidades:
+HTML, CSS, JavaScript, React, Responsive Design
+Certificaciones:
+Certificación en Desarrollo Web Full Stack, Certificación en ReactJS
+Experiencia Laboral:
+2 años como Desarrolladora Web en una empresa de software, trabajando principalmente en el desarrollo de interfaces de usuario y optimización de sitios web.
+Modalidad de Trabajo: 
+Remoto
+Tipo de Contrato: 
+Tiempo completo
+
+# Ejemplo 2
+Nombre: 
+Andrés López
+Cargo Aspirado: 
+Analista de Datos
+Ciudad: 
+Guayaquil
+Discapacidad: 
+No
+Nivel de Educación: 
+Licenciatura en Estadística
+Habilidades: 
+Python, SQL, R, Análisis de Datos, Visualización de Datos, Power BI
+Certificaciones: 
+Certificación en Data Science con Python, Certificación en Power BI
+Experiencia Laboral: 
+3 años como Analista de Datos en una empresa de telecomunicaciones, realizando análisis predictivo y reportes visuales.
+Modalidad de Trabajo:
+ Híbrido
+Tipo de Contrato: 
+Medio tiempo
+
+# Ejemplo 3
+Nombre: María Fernández
+Cargo Aspirado: Ingeniera de Software
+Ciudad: Cuenca
+Discapacidad: Sí
+Nivel de Educación: Maestría en Ingeniería de Software
+Habilidades: Java, Spring Boot, Microservicios, Docker, Kubernetes
+Certificaciones: Certificación en Java SE 8, Certificación en DevOps con Kubernetes
+Experiencia Laboral: 5 años como Ingeniera de Software, con experiencia en desarrollo backend, arquitectura de microservicios y despliegue en la nube.
+Modalidad de Trabajo: Presencial
+Tipo de Contrato: Tiempo completo
+
+# Ejemplo 4
+Nombre: Juan Castillo
+Cargo Aspirado: Diseñador Gráfico
+Ciudad: Ambato
+Discapacidad: No
+Nivel de Educación: Técnico en Diseño Gráfico
+Habilidades: Adobe Photoshop, Illustrator, InDesign, Branding, Diseño de Interfaces
+Certificaciones: Certificación en Diseño Gráfico, Certificación en UX/UI Design
+Experiencia Laboral: 4 años como Diseñador Gráfico en una agencia de publicidad, creando campañas visuales y material gráfico para clientes internacionales.
+Modalidad de Trabajo: Remoto
+Tipo de Contrato: Pasantía

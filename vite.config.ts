@@ -1,22 +1,23 @@
-import { fileURLToPath, URL } from 'node:url'
-
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import { fileURLToPath, URL } from 'node:url'
+import path from 'node:path'
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
-  return {
-    plugins: [vue(), vueJsx()],
-    server: {
-      port: env.VITE_PORT ? parseInt(env.VITE_PORT, 10) : 3000
-    },
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
+export default defineConfig({
+  server: {
+    port: 3000
+  },
+  css: {
+    postcss: {
+      plugins: [tailwind(), autoprefixer()]
+    }
+  },
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
     }
   }
 })
