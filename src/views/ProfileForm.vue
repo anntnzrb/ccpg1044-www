@@ -2,7 +2,7 @@
   <div class="flex items-center justify-center">
     <div class="flex min-h-svh items-center justify-center min-w-[640px]">
       <Form
-        v-slot="{ meta, values, validate }"
+        v-slot="{ meta, values, validate, setFieldValue }"
         as=""
         keep-values
         :validation-schema="toTypedSchema(validationSchema[stepIndex - 1])"
@@ -79,7 +79,7 @@
                       <Input
                         type="text"
                         v-bind="componentField"
-                        @dblclick="componentField.value = 'Mateo Velez'"
+                        @dblclick="!values['name'] && setFieldValue('name', 'Laura Pérez')"
                       />
                     </FormControl>
                     <FormMessage />
@@ -94,6 +94,10 @@
                         type="text"
                         v-bind="componentField"
                         placeholder="Ej. Desarrollador de Software"
+                        @dblclick="
+                          !values['job_title'] &&
+                            setFieldValue('job_title', 'Desarrolladora Frontend')
+                        "
                       />
                     </FormControl>
                     <FormMessage />
@@ -104,7 +108,11 @@
                   <FormItem>
                     <FormLabel>Ciudad</FormLabel>
                     <FormControl>
-                      <Input type="text" v-bind="componentField" />
+                      <Input
+                        type="text"
+                        v-bind="componentField"
+                        @dblclick="!values['location'] && setFieldValue('location', 'Quito')"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -141,6 +149,10 @@
                         type="text"
                         v-bind="componentField"
                         placeholder="Ej. Licenciatura en Administración de Empresas"
+                        @dblclick="
+                          !values['education_level'] &&
+                            setFieldValue('education_level', 'Ingeniería en Sistemas')
+                        "
                       />
                     </FormControl>
                     <FormMessage />
@@ -155,6 +167,13 @@
                         class="resize-none"
                         v-bind="componentField"
                         placeholder="Ej. Gestión de proyectos, Desarrollo web, Comunicación efectiva"
+                        @dblclick="
+                          !values['skills'] &&
+                            setFieldValue(
+                              'skills',
+                              'HTML, CSS, JavaScript, React, Responsive Design'
+                            )
+                        "
                       />
                     </FormControl>
                     <FormMessage />
@@ -169,6 +188,13 @@
                         class="resize-none"
                         v-bind="componentField"
                         placeholder="Ej. Scrum Master, TOEFL, Cisco Certified Network Associate (CCNA)"
+                        @dblclick="
+                          !values['certifications'] &&
+                            setFieldValue(
+                              'certifications',
+                              'Certificación en Desarrollo Web Full Stack, Certificación en ReactJS'
+                            )
+                        "
                       />
                     </FormControl>
                     <FormMessage />
@@ -185,6 +211,13 @@
                         class="resize-none"
                         v-bind="componentField"
                         placeholder="Ej. Gerente de marketing en ABC Ltd., 5 años - Estrategias de crecimiento y campañas digitales"
+                        @dblclick="
+                          !values['work_experience'] &&
+                            setFieldValue(
+                              'work_experience',
+                              '2 años como Desarrolladora Web en una empresa de software, trabajando principalmente en el desarrollo de interfaces de usuario y optimización de sitios web.'
+                            )
+                        "
                       />
                     </FormControl>
                     <FormMessage />

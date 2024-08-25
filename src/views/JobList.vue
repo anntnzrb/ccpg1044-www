@@ -5,7 +5,11 @@
         Mejores ofertas de acuerdo a tu perfil
       </h1>
 
-      <div v-if="recommendations" class="flex flex-col gap-8">
+      <div v-if="loading">
+        <h3>Cargando...</h3>
+      </div>
+
+      <div v-if="recommendations && !loading" class="flex flex-col gap-8">
         <div
           v-for="job in recommendations"
           :key="job.title"
@@ -36,6 +40,9 @@
           </div>
         </div>
       </div>
+      <div v-if="!recommendations && !loading">
+        <p class="text-2xl tracking-tight">No hay ofertas disponibles.</p>
+      </div>
     </div>
 
     <Button @click="router.push('/')">Llévame al inicio</Button>
@@ -50,6 +57,7 @@ import { Button } from '@/components/ui/button'
 
 const router = useRouter()
 const profileStore = useProfileStore()
+const loading = ref(false)
 
 type Job = {
   title: string
@@ -77,8 +85,8 @@ onMounted(async () => {
     contract_type: profileStore.profile.contract_type,
     disability: profileStore.profile.disability === 'si' ? 'discapacidad' : ''
   }
-  console.log(p)
 
+  loading.value = true
   const response = await fetch('http://localhost:8000/api/get-job-recommendations/?n=5', {
     method: 'POST',
     headers: {
@@ -87,11 +95,9 @@ onMounted(async () => {
     body: JSON.stringify(p)
   })
 
-  console.log(response)
-
   const data = await response.json()
 
+  loading.value = false
   recommendations.value = data.recommendations
-  console.log(data.recommendations)
 })
 </script>
